@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário de Login</title>
+  <style>
+    body {
+      background-color: #fff;
+      color: #333;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    
+    h2 {
+      font-size: 28px;
+    }
+    
+    form {
+      display: inline-block;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ddd;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+      text-align: left;
+    }
+    
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    
+    input[type="submit"] {
+      background-color: #ff0000;
+      color: #fff;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #cc0000;
+    }
+    
+    a {
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  </style>
+  <script>
+    function verificarFormulario() {
+      var email = document.getElementById("email").value;
+      var senha = document.getElementById("senha").value;
+      
+      if (email === "" || senha === "") {
+        alert("Por favor, preencha todos os campos.");
+        return false;
+      }
+      
+      // Verificar se o email corresponde ao padrão de um email
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert("Por favor, insira um endereço de email válido.");
+        return false;
+      }
+      
+      // Redirecionar para o novo vídeo do YouTube
+      window.location.href = "https://youtu.be/aoLvbUjvaKI";
+      
+      return false; // Impede o envio do formulário tradicional
+    }
+  </script>
+</head>
+<body>
+  <h2>Formulário de Login</h2>
+  
+  <form onsubmit="return verificarFormulario()">
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required>
+    
+    <input type="submit" value="Entrar">
+  </form>
+  
+  <p>
+    <a href="#" onclick="verificarFormulario()">Enviar</a>
+  </p>
+</body>
+</html>
+
